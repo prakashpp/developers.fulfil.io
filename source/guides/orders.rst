@@ -500,13 +500,13 @@ The payments are sent as a list of payment objects. Most orders should only have
     [
         {
             "amount": 499.45,
-            "channel_identifier": "3669",
+            "provider_reference": "3669",
             "method": "stripe",
             "state": "success"
         }
     ]
 
-`channel_identifier`
+`provider_reference`
     The transaction ID which will then be used by Fulfil to manage refunds
     or credits.
 `amount`

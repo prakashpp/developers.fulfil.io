@@ -9,3 +9,4 @@
    managing-inventory
    orders
    gift-cards
+   data-warehouse
