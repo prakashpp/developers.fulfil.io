@@ -121,6 +121,9 @@ and the JSON representing an order.
                 'quantity': 1,
                 'unit_price': Decimal('200.00'),
                 'amount': Decimal('200.00'),
+
+                # a note specific to the line.
+                'comment': 'With extended range for a tall person'
             },
         ],
         'shipping_lines': [
@@ -384,7 +387,8 @@ Each order item should have at-least the following properties:
     The suggested retail price to show discounts against. If no value if given,
     the list_price on the product is automatically picked up.
 `comment`
-    Line item comments. Usually printed on picking slips for customization.
+    Line item comments. Usually printed on picking slips for customization like
+    engraving.
 `metadata`
     A JSON object for additional metadata about the line item
 `shipping_date`
