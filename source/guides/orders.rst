@@ -396,9 +396,15 @@ Each order item should have at-least the following properties:
     of the shipments from this order.
 `fulfil_strategy`
     The strategy for fulfilling this line item. Allowed strategies are
-    `ship` (default), `pick_up` (for in-store pick-ups), `dropship`,
-    `backorder` and `make_on_order`. Learn more about these `strategies
-    here <https://www.fulfil.help/hc/en-us/articles/360011390331>`_.
+
+    * `ship` (default), 
+    * `pick_up` (for in-store pick-ups), 
+    * `dropship`,
+    * `backorder`
+    * `make_on_order`. 
+
+    Learn more about these 
+    `strategies here <https://www.fulfil.help/hc/en-us/articles/360011390331>`_.
 `gift_message`
     Gift message specific to the line item.
 `warehouse`
