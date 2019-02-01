@@ -188,6 +188,39 @@ Example using python
         print token['offline_access_token']
 
 
+Using Postman
+-------------
+
+`Postman <https://www.getpostman.com/>`_ is an OSX application that
+lets you send HTTP requests to Fulfil API endpoints. It can be a
+useful tool for getting started with the Fulfil API or for debugging
+your apps.
+
+
+Using Oauth 2.0 with Postman
+````````````````````````````
+
+Step 1: Select Oauth 2.0 as the authorization
+'''''''''''''''''''''''''''''''''''''''''''''
+
+.. image:: ../_static/images/article-images/postman-authorization.png
+
+Step 2: Get an access token
+'''''''''''''''''''''''''''''''''''''
+
+* Grant Type as `Authorization code`
+* Callback URL: `https://www.getpostman.com/oauth2/callback`
+* Auth URL: `https://{merchant_id}.fulfil.io/oauth/authorize`
+* Access Token URL: `https://{merchant_id}.fulfil.io/oauth/token`
+* Client ID: Client ID obtained in steps above
+* Client Secret: Client Secret obtained in steps above
+* Scopes: Enter the scopes needed
+* State: Enter a random string that should be used as state
+* Client Authentication: `Send client credentials in body`
+
+.. image:: ../_static/images/article-images/postman-access-token.png
+
+
 .. _OAuth 2.0 specification: https://tools.ietf.org/html/rfc6749
 .. _Terminology: #terminology
 .. _`Step 1: Get the client's credentials`: #get-credentials
