@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 project = u'Fulfil Docs'
-copyright = u'2018, Fulfil.IO Inc.'
+copyright = u'2015-2019, Fulfil.IO Inc.'
 author = u'Fulfil.IO Inc.'
 
 # The short X.Y version
