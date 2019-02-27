@@ -10,3 +10,4 @@
    orders
    gift-cards
    data-warehouse
+   webhooks
