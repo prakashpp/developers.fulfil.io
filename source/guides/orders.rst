@@ -138,6 +138,7 @@ and the JSON representing an order.
 
         'amount': Decimal('200.00'),
         'currency_code': 'USD',
+        'requested_shipping_service': 'ups_ground',
 
         'status': 'pending',
         'financial_status': 'paid',
@@ -480,6 +481,7 @@ An array of shipping lines. Most orders will have just one line.
     The code that identifies the carrier and service. This should be setup ahead of
     time on the channel's shipping carrier settings. This avoids having to update
     your code everytime shipping services change.
+    This will be deprecated soon, use requested shipping_service attribute on order.
 `description`
     Line item description. Usually what the customer would have been displayed
     when the order was placed. For example, "Expedited Shipping" could be what was
@@ -564,6 +566,13 @@ Internal order comments.
 
 This field will be deprecated in future and any comments sent will be added as
 a private note on the order.
+
+`requested_shipping_service`
+````````````````````````````
+
+The code that identifies the carrier and service. This should be setup ahead of
+time on the channel's shipping carrier settings. This avoids having to update
+your code everytime shipping services change.
 
 Status Fields
 ````````````````
