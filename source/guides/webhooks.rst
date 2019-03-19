@@ -70,6 +70,7 @@ Payloads contain a JSON object with the data for the webhook event.
 The contents and structure of each payload varies depending on the
 subscribed event.
 
+
 Receiving a webhook
 ```````````````````
 
@@ -133,3 +134,37 @@ data like inventory levels.
   For example, in addition to relying on webhooks for inventory updates,
   you can pull inventory of all products once a day to reconcile any
   missed webhooks.
+
+
+Payload Examples
+----------------
+
+Below are examples for payloads for different webhook events.
+
+Inventory Updates
+`````````````````
+
+.. code-block:: javascript
+
+    [
+      {
+        "timestamp": "2019-03-19T21:34:49.296368",
+        "product_code": "SKU",
+        "warehouse_quantities": [
+          {
+            "warehouse_id": 4,
+            "quantity_on_hand": 0,
+            "quantity_available": 0,
+            "warehouse_code": "WAREHOUSE-EAST"
+          },
+          {
+            "warehouse_id": 65,
+            "quantity_on_hand": 0,
+            "quantity_available": 0,
+            "warehouse_code": "WAREHOUSE-WEST"
+          },
+        ],
+        "product_id": 3697,
+        "listing_quantities": []
+      }
+    ]
