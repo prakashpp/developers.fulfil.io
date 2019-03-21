@@ -11,3 +11,4 @@
    gift-cards
    data-warehouse
    webhooks
+   drop-shipping
