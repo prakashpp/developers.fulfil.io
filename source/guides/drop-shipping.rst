@@ -254,9 +254,38 @@ might want to add it to the drop shipment. The tracking number is a separate
 object on Fulfil that can then be associated with many shipment related
 records including drop shipments.
 
+**Step 1: Create a tracking number**
+
 .. code-block:: shell
 
-   Example here
+   curl -X POST \
+     https://{merchant}.fulfil.io/api/{version}/model/shipment.tracking/create \
+     -H 'Content-Type: application/json' \
+     -H 'X-API-KEY: {your-api-key}' 
+     -d '[
+           [[{"tracking_number": "1Z1234E765432123", "carrier": 1}]]
+         ]'
+
+
+The carrier id is the ID of the shipping carrier record in Fulfil. To find your
+list of shipping carriers and IDs, navigate to Settings > Carriers.
+
+**Step 2: Associate tracking number with Drop Shipment**
+
+.. code-block:: shell
+
+   curl -X POST \
+     https://{merchant}.fulfil.io/api/{version}/model/stock.shipment.drop/write \
+     -H 'Content-Type: application/json' \
+     -H 'X-API-KEY: {your-api-key}' 
+     -d '[
+          [117],
+          {"tracking_number":137676, "carrier":1}
+      ]'
+
+
+Where 117 is the ID of the drop shipment and 137676 is the id of the tracking
+number that was created in the previous step.
 
 
 Marking drop shipments as done
@@ -272,4 +301,3 @@ endpoint.
      -d '[
            [117, 118]
          ]'
-
