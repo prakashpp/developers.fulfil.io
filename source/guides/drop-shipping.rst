@@ -294,6 +294,8 @@ Marking drop shipments as done
 Similar to ship step, this can be done with a PUT call to the `done`
 endpoint.
 
+.. code-block:: shell
+
    curl -X PUT \
      https://{merchant}.fulfil.io/api/{version}/model/stock.shipment.drop/done \
      -H 'Content-Type: application/json' \
