@@ -77,7 +77,7 @@ Receiving a webhook
 After you register a webhook URL, Fulfil issues a HTTPS POST request
 to the URL specified every time that event occurs. The request's POST
 parameters contain JSON data relevant to the event that triggered
-the request.
+the request and HTTP header `X-Fulfil-Event` containing the event name.
 
 Fulfil verifies SSL certificates when delivering payloads to HTTPS webhook
 addresses. Make sure your server is correctly configured to support HTTPS
