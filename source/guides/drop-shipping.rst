@@ -254,7 +254,8 @@ might want to add it to the drop shipment. The tracking number is a separate
 object on Fulfil that can then be associated with many shipment related
 records including drop shipments.
 
-**Step 1: Create a tracking number**
+Step 1: Create a tracking number
+................................
 
 .. code-block:: shell
 
@@ -270,7 +271,8 @@ records including drop shipments.
 The carrier id is the ID of the shipping carrier record in Fulfil. To find your
 list of shipping carriers and IDs, navigate to Settings > Carriers.
 
-**Step 2: Associate tracking number with Drop Shipment**
+Step 2: Associate tracking number with Drop Shipment
+....................................................
 
 .. code-block:: shell
 
